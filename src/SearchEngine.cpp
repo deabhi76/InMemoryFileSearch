@@ -36,8 +36,7 @@ void SearchEngine::loadDocuments(const string& folder) {
     }
 }
 
-bool SearchEngine::phraseMatch(const Document& doc,
-                               const vector<string>& phrase) const {
+bool SearchEngine::phraseMatch(const Document& doc, const vector<string>& phrase) const {
     if (!doc.getPositions().count(phrase[0])) return false;
 
     for (int pos : doc.getPositions().at(phrase[0])) {
@@ -56,8 +55,7 @@ bool SearchEngine::phraseMatch(const Document& doc,
     return false;
 }
 
-string SearchEngine::generateSnippet(const Document& doc,
-                                     const string& term) const {
+string SearchEngine::generateSnippet(const Document& doc,const string& term) const {
     string text = doc.getContent();
     string lower = text;
     for (char& c : lower) c = tolower(c);
