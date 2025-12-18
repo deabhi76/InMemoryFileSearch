@@ -1,0 +1,2 @@
+C plus plus is a powerful programming language widely used for system software,
+game engines, competitive programming, and performance critical applications.

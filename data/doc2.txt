@@ -1,0 +1,3 @@
+Inverted index is a core concept used in file search and information retrieval
+systems. It maps terms to the documents in which they appear, allowing fast
+lookup during query processing.

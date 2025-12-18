@@ -1,0 +1,3 @@
+Phrase based search allows users to find documents where words appear in a
+specific order. Positional indexing helps in implementing phrase queries
+efficiently.

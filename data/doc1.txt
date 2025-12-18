@@ -1,0 +1,3 @@
+Data structures and algorithms form the foundation of computer science.
+Understanding arrays, linked lists, stacks, queues, trees, and graphs is
+essential for writing efficient programs.

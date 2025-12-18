@@ -1,0 +1,3 @@
+Ranking documents based on relevance is an important task in retrieval systems.
+Techniques such as term frequency, inverse document frequency, and length
+normalization help improve search accuracy.
