@@ -8,6 +8,8 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+#include <limits>
+
 
 using namespace std;
 
@@ -23,7 +25,8 @@ void SearchEngine::loadDocuments(const string& folder) {
     for (auto& entry : filesystem::directory_iterator(folder)) {
         if (entry.path().extension() == ".txt") {
             Document doc(id, readFile(entry.path().string()));
-            documents[id] = doc;
+            documents.emplace(id, doc);   
+
 
             for (auto& [word, _] : doc.getPositions())
                 invertedIndex[word].insert(id);
@@ -132,6 +135,7 @@ void SearchEngine::search(const string& query) {
     cout << "Enter document number to view (0 to exit): ";
     int choice;
     cin >> choice;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
     if (choice <= 0 || choice > resultOrder.size()) {
         cout << "Exiting.\n";
