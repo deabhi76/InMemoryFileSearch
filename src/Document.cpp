@@ -1,7 +1,7 @@
 #include "Document.h"
 #include "Tokenizer.h"
-
-Document::Document(int id, const std::string& content)
+using namespace std;
+Document::Document(int id, const string& content)
     : id(id), content(content), length(0) {
 
     auto tokens = Tokenizer::tokenize(content);
@@ -19,11 +19,11 @@ int Document::getLength() const {
     return length;
 }
 
-const std::string& Document::getContent() const {
+const string& Document::getContent() const {
     return content;
 }
 
-const std::unordered_map<std::string, std::vector<int>>&
+const unordered_map<string, vector<int>>&
 Document::getPositions() const {
     return positions;
 }
